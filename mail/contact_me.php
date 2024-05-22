@@ -1,21 +1,21 @@
 <?php
-//Ñáîð äàííûõ èç ïîëåé ôîðìû. 
-$name = $_POST['name'];// Áåð¸ì äàííûå èç input c àòðèáóòîì name="name"
-$phone = $_POST['phone']; // Áåð¸ì äàííûå èç input c àòðèáóòîì name="phone"
-$email = $_POST['mail']; // Áåð¸ì äàííûå èç input c àòðèáóòîì name="mail"
+//Ã‘Ã¡Ã®Ã° Ã¤Ã Ã­Ã­Ã»Ãµ Ã¨Ã§ Ã¯Ã®Ã«Ã¥Ã© Ã´Ã®Ã°Ã¬Ã». 
+$name = $_POST['name'];// ÃÃ¥Ã°Â¸Ã¬ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¨Ã§ input c Ã Ã²Ã°Ã¨Ã¡Ã³Ã²Ã®Ã¬ name="name"
+$phone = $_POST['phone']; // ÃÃ¥Ã°Â¸Ã¬ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¨Ã§ input c Ã Ã²Ã°Ã¨Ã¡Ã³Ã²Ã®Ã¬ name="phone"
+$email = $_POST['mail']; // ÃÃ¥Ã°Â¸Ã¬ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¨Ã§ input c Ã Ã²Ã°Ã¨Ã¡Ã³Ã²Ã®Ã¬ name="mail"
 $message = $_POST['message'];
  
-$token = "7022596908:AAFiYK75WijA4MEsA5cbbDAtKZvdiGFF7nc"; // Òóò ïèøåì òîêåí
-$chat_id = "669789653"; // Òóò ïèøåì ID ÷àòà, êóäà áóäóò îòïðàâëÿòüñÿ ñîîáùåíèÿ
-$sitename = "domaubabushki.ru"; //Óêàçûâàåì íàçâàíèå ñàéòà
+$token = "7022596908:AAFiYK75WijA4MEsA5cbbDAtKZvdiGFF7nc"; // Ã’Ã³Ã² Ã¯Ã¨Ã¸Ã¥Ã¬ Ã²Ã®ÃªÃ¥Ã­
+$chat_id = "669789653"; // Ã’Ã³Ã² Ã¯Ã¨Ã¸Ã¥Ã¬ ID Ã·Ã Ã²Ã , ÃªÃ³Ã¤Ã  Ã¡Ã³Ã¤Ã³Ã² Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã²Ã¼Ã±Ã¿ Ã±Ã®Ã®Ã¡Ã¹Ã¥Ã­Ã¨Ã¿
+$sitename = "domaubabushki.github.io"; //Ã“ÃªÃ Ã§Ã»Ã¢Ã Ã¥Ã¬ Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ Ã±Ã Ã©Ã²Ã 
  
 $arr = array(
  
-  'Çàêàç ñ ñàéòà: ' => $sitename,
-  'Èìÿ: ' => $name,
-  'Òåëåôîí: ' => $phone,
-  'Ïî÷òà' => $email,
-  'Îòçûâ' => $message
+  'Ã‡Ã ÃªÃ Ã§ Ã± Ã±Ã Ã©Ã²Ã : ' => $sitename,
+  'ÃˆÃ¬Ã¿: ' => $name,
+  'Ã’Ã¥Ã«Ã¥Ã´Ã®Ã­: ' => $phone,
+  'ÃÃ®Ã·Ã²Ã ' => $email,
+  'ÃŽÃ²Ã§Ã»Ã¢' => $message
 );
  
 foreach($arr as $key => $value) {
