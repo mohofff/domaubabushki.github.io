@@ -1,27 +1,27 @@
 <?php
-$email_address = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-// Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
-   !$email_address)
-   {
-	echo "Введите все данные";
-	return false;
-   }
-$name = $_POST['name'];
-if ($email_address === FALSE) {
-    echo 'Неправильная почта';
-    exit(1);
-}
-$phone = $_POST['phone'];
+//Сбор данных из полей формы. 
+$name = $_POST['name'];// Берём данные из input c атрибутом name="name"
+$phone = $_POST['phone']; // Берём данные из input c атрибутом name="phone"
+$email = $_POST['mail']; // Берём данные из input c атрибутом name="mail"
 $message = $_POST['message'];
-$to = 'mohow.org@gmail.com';
-$email_subject = "Контактная форма от:  $name";
-$email_body = "Вы получили новое сообщение из контактной формы на вашем веб-сайте.\n\n"."Здесь детали отзыва:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "От: noreply@yourdomain.com\n";
-$headers .= "Ответить: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-return true;
+ 
+$token = "7022596908:AAFiYK75WijA4MEsA5cbbDAtKZvdiGFF7nc"; // Тут пишем токен
+$chat_id = "669789653"; // Тут пишем ID чата, куда будут отправляться сообщения
+$sitename = "domaubabushki.ru"; //Указываем название сайта
+ 
+$arr = array(
+ 
+  'Заказ с сайта: ' => $sitename,
+  'Имя: ' => $name,
+  'Телефон: ' => $phone,
+  'Почта' => $email,
+  'Отзыв' => $message
+);
+ 
+foreach($arr as $key => $value) {
+  $txt .= "<b>".$key."</b> ".$value."%0A";
+};
+ 
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+ 
 ?>
