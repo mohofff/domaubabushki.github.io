@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.jpg">
+    <style>
+        /* Слайдер: */
+        .slider {
+            max-width: 90%;
+            /* Положение элемента устанавливается относительно его исходной позиции: */
+            position: relative;
+            /* Центрируем по горизонтали: */
+            margin: auto;
+            height: 500px;
+        }
+
+            /* Картинка масштабируется по отношению к родительскому элементу: */
+            .slider .item img {
+                /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+                object-fit: cover;
+                width: 100%;
+                height: 500px;
+            }
+
+            /* Кнопки назад и вперёд: */
+            .slider .previous, .slider .next {
+                /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+                cursor: pointer;
+                /* Положение элемента задаётся относительно границ браузера: */
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                /* Оформление самих кнопок: */
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                /* Плавное появление фона при наведении курсора: */
+                transition: 0.6s ease;
+                /* Скругление границ: */
+                border-radius: 0 3px 3px 0;
+            }
+
+            .slider .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+                /* При наведении курсора на кнопки добавляем фон кнопок: */
+                .slider .previous:hover,
+                .slider .next:hover {
+                    background-color: rgb(255, 106, 0);
+                }
+
+            /* Анимация слайдов: */
+            .slider .item {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+        @keyframes fade {
+            /* Устанавливаем и изменяем степень прозрачности: */
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+    </style>
+    <title>Дома у Бабушки</title>
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Дома у Бабушки</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">Домик</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#menu">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#where">Мы здесь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+        <div class="container">
+            <div class="intro-text text-uppercase">
+                <div class="intro-subheading">Традиционный ресторан</div>
+                <div class="intro-heading">Традиционная Бабушкина кухня</div>
+                <a class="btn btn-danger btn-big js-scroll-trigger" href="#foto">Взгляните на наш домик</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Бабушкин домик</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="ion-ios-home icon-big mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Традиции</h3>
+                        <p class="text-muted mb-0">Мебель в деревенском стиле создает теплую, гостеприимную атмосферу. Важность традиций по-прежнему присутствует в нас, и приятно иметь возможность донести ее до наших клиентов с помощью вкусных блюд.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="ion-fork icon-big mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Домашняя кухня</h3>
+                        <p class="text-muted mb-0">Главной особенностью является местная и региональная домашняя кухня с типичными блюдами, такими как перепечи, табани и как же обойтись без блинов.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="ion-ios-wineglass icon-big mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Большой выбор домашних напитков</h3>
+                        <p class="text-muted mb-0">Все это сопровождается отличным выбором домашних напитков, таких как домашний квас, компотики и соки из свежевыращенных ягод и фруктов.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="ion-pizza icon-big mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Есть ещё и домашняя пицца</h3>
+                        <p class="text-muted mb-0">Другие варианты включают запечённую в печи курицу илии утку, суп "Борщ" и многие другие блюда в нашем меню. Вечером вы также можете насладиться пиццей.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="foto">
+        <div class="slider">
+
+            <div class="item">
+                <img src="assets\img\1.jpg">
+            </div>
+
+            <div class="item">
+                <img src="assets\img\2.jpeg">
+            </div>
+
+            <div class="item">
+                <img src="assets\img\3.jpeg">
+            </div>
+
+            <div class="item">
+                <img src="assets\img\4.jpeg">
+            </div>
+
+            <div class="item">
+                <img src="assets\img\5.jpg">
+            </div>
+
+            <div class="item">
+                <img src="assets\img\6.png">
+            </div>
+
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+    </section>
+
+        <script>
+            /* Устанавливаем стартовый индекс слайда по умолчанию: */
+            let slideIndex = 1;
+            /* Вызываем функцию, которая реализована ниже: */
+            showSlides(slideIndex);
+
+            /* Увеличиваем индекс на 1 — показываем следующий слайд: */
+            function nextSlide() {
+                showSlides(slideIndex += 1);
+            }
+
+            /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
+            function previousSlide() {
+                showSlides(slideIndex -= 1);
+            }
+
+            /* Устанавливаем текущий слайд: */
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            /* Функция перелистывания: */
+            function showSlides(n) {
+                /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
+                let slides = document.getElementsByClassName("item");
+
+                /* Проверяем количество слайдов: */
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+
+                /* Проходим по каждому слайду в цикле for: */
+                for (let slide of slides) {
+                    slide.style.display = "none";
+                }
+                /* Делаем элемент блочным: */
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
+
+        <section class="bg-light" id="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Меню</h2>
+                        <hr class="mt-4 mb-5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal1">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/01-thumbnail.jpg" alt="Блины со сметаной">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Блины со сметаной</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal2">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/02-thumbnail.jpg" alt="Табани с мясом">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Табани с мясом</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal3">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/03-thumbnail.jpeg" alt="Борщ">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Борщ</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal4">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/04-thumbnail.jpg" alt="Перепечи с грибами и картошкой">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Перепечи с грибами и картошкой</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal5">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/05-thumbnail.jpeg" alt="Перепечи с мясом">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Перепечи с мясом</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 menu-item">
+                        <a class="menu-link" data-toggle="modal" href="#menuModal6">
+                            <div class="menu-hover">
+                                <div class="menu-hover-content">
+                                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/menu/thumbnail/06-thumbnail.jpg" alt="Компот из сушенной малины">
+                        </a>
+                        <div class="menu-caption">
+                            <p class="text-muted">Компот из сушенной малины</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="where">
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Мы здесь</h2>
+                        <hr class="mt-4 mb-5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917.0708145978182!2d53.161693337396024!3d56.860106325041585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e138d31db81263%3A0xb950ea89a032e50e!2z0JHQtdGB0LXQtNC60LA!5e0!3m2!1sru!2sru!4v1715438409392!5m2!1sru!2sru" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-white text-uppercase">Как вам у Бабушки?</h2>
+                        <hr class="mt-4 mb-5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="contactForm" name="sentMessage" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" type="text" placeholder="ФИО" required data-validation-required-message="Введите своё ФИО">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="email" type="email" placeholder="Почта" required data-validation-required-message="Введите свою почту">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="phone" type="tel" placeholder="Телефон" required data-validation-required-message="Введите свой телефон">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" placeholder="Комментарий" required data-validation-required-message="Напишите что-нибудь"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button id="sendMessageButton" class="btn btn-danger btn-big text-uppercase" type="submit">
+                                        Спасибо за отзыв
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="list-inline social-buttons mb-0">
+                            <li class="list-inline-item">
+                                <a href="tel:+79508319211">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://vk.com/i.youkai" target="_blank">
+                                    <i class="fa fa-vk" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://web.telegram.org/k/#@youkai4ik" target="_blank">
+                                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <span class="copyright">Дома у Бабушки &copy; 2024</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </a>
+
+        <div class="menu-modal modal fade" id="menuModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Блины со сметаной</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/01-full.jpg" alt="Блины со сметаной">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Выпечка</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 30 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> кефир или кислое молоко любой жирности, пшеничная мука высшего или первого сорта, куриные яйца среднего размера, рафинированное растительное масло, сахарный песок, пищевая сода и соль. А так же сметана для улучшенного вкуса.
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-modal modal fade" id="menuModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Табани с мясом</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/02-full.jpg" alt="Табани с мясом">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Выпечка</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 50 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> мука пшеничная, сахар, дрожжи, молоко, масло сливочное, соль, яйцо куриное, лук зеленый, мясо говяжье.
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-modal modal fade" id="menuModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Борщ</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/03-full.jpeg" alt="Борщ">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Супы</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 100 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> грудинка говяжья, шпинат, щавель, зелень (укроп, петрушка), картофель, лук репчатый, масло растительное, яйца, соль, вода, яйца отварные для подачи (по желанию), сметана
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-modal modal fade" id="menuModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Перепечи с грибами и картошкой</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/04-full.jpg" alt="Перепечи с грибами и картошкой">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Выпечка</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 50 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> грибы, картошка, сливочное масло, куриное яйцо, молоко, тесто
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-modal modal fade" id="menuModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Перепечи с мясом</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/05-full.jpeg" alt="Перепечи с мясом">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Выпечка</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 50 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> фарш маясной, сливочное масло, куриное яйцо, молоко, тесто
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-modal modal fade" id="menuModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Компот из сушенной малины</h2>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/menu/full/06-full.jpg" alt="Компот из сушенной малины">
+                                    <ul class="list-inline">
+                                        <li><span class="font-weight-bold">Категория:</span> Соки</li>
+                                        <li><span class="font-weight-bold">Цена:</span> 20 руб.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Ингридиенты: </strong> сушенная малина, сахар, вода
+                                    </p>
+                                    <button class="btn btn-danger" data-dismiss="modal" type="button">
+                                        Закрыть
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="vendor/jqBootstrapValidation/jqBootstrapValidation.min.js"></script>
+        <script src="assets/js/contact.min.js"></script>
+        <script src="assets/js/script.min.js"></script>
+</body>
+</html>
