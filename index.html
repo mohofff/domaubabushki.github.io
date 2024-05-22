@@ -346,51 +346,13 @@
             </div>
         </section>
 
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-white text-uppercase">Как вам у Бабушки?</h2>
-                        <hr class="mt-4 mb-5">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form id="contactForm" name="sentMessage" novalidate>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" type="text" placeholder="ФИО" required data-validation-required-message="Введите своё ФИО">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" type="email" placeholder="Почта" required data-validation-required-message="Введите свою почту">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" type="tel" placeholder="Телефон" required data-validation-required-message="Введите свой телефон">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Комментарий" required data-validation-required-message="Напишите что-нибудь"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button id="sendMessageButton" class="btn btn-danger btn-big text-uppercase" type="submit">
-                                        Спасибо за отзыв
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <form action="contact_me.php" method="POST">
+            <input type="text" placeholder="Как вас зовут?" name="name">
+            <input type="tel" placeholder="Ваш телефон" name="phone">
+            <input type="tel" placeholder="Ваша почта" name="email">
+            <input type="tel" placeholder="Ваши комментарии" name="message">
+            <button type="submit">Отправить</button>
+        </form>
 
         <footer>
             <div class="container">
