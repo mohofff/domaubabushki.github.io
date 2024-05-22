@@ -1,27 +1,28 @@
 <?php
-//Ñáîð äàííûõ èç ïîëåé ôîðìû. 
-$name = $_POST['name'];// Áåð¸ì äàííûå èç input c àòðèáóòîì name="name"
-$phone = $_POST['phone']; // Áåð¸ì äàííûå èç input c àòðèáóòîì name="phone"
-$email = $_POST['mail']; // Áåð¸ì äàííûå èç input c àòðèáóòîì name="mail"
+$email_address = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+// Check for empty fields
+if(empty($_POST['name'])  		||
+   empty($_POST['email']) 		||
+   empty($_POST['phone']) 		||
+   empty($_POST['message'])	||
+   !$email_address)
+   {
+	echo "No arguments Provided!";
+	return false;
+   }
+$name = $_POST['name'];
+if ($email_address === FALSE) {
+    echo 'Invalid email';
+    exit(1);
+}
+$phone = $_POST['phone'];
 $message = $_POST['message'];
- 
-$token = "7022596908:AAFiYK75WijA4MEsA5cbbDAtKZvdiGFF7nc"; // Òóò ïèøåì òîêåí
-$chat_id = "669789653"; // Òóò ïèøåì ID ÷àòà, êóäà áóäóò îòïðàâëÿòüñÿ ñîîáùåíèÿ
-$sitename = "domaubabushki.github.io"; //Óêàçûâàåì íàçâàíèå ñàéòà
- 
-$arr = array(
- 
-  'Çàêàç ñ ñàéòà: ' => $sitename,
-  'Èìÿ: ' => $name,
-  'Òåëåôîí: ' => $phone,
-  'Ïî÷òà' => $email,
-  'Îòçûâ' => $message
-);
- 
-foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
-};
- 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
- 
+// Create the email and send the message
+$to = 'eneaxharja@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "Website Contact Form:  $name";
+$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers .= "Reply-To: $email_address";
+mail($to,$email_subject,$email_body,$headers);
+return true;
 ?>
